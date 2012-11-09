@@ -1,0 +1,17 @@
+<html>
+	<head>로그인</head>
+	<body>
+		<button id="button">button</button>
+		<script src="util.js"></script>
+		<script src="login.js"></script>
+		<script>
+		document.getElementById('button').addEventListener('click', function(){
+			Login.setLoginFrame('frame.html', function(){
+				if(localStorage.getItem('uid')){
+					console.log('logined');
+				}
+			});
+		}, false);
+		</script>
+	</body>
+</html>
